@@ -8,6 +8,6 @@ exit
 
 Vampire: MacKenzie
 
-Circus:
+Circus: Emily
 
 Zombie:
