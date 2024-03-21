@@ -1,4 +1,4 @@
-public class Escape-room {
+public class EscapeRoom {
   public static void main(String[] args) {
 
   }
