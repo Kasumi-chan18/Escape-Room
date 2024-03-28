@@ -10,4 +10,4 @@ Vampire: MacKenzie
 
 Circus:
 
-Zombie:
+Zombie: Deborah
