@@ -1,5 +1,6 @@
 # Escape-Room
-commands: 
+
+commands:
 open
 investigate
 go to
