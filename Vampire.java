@@ -63,7 +63,7 @@ public class Vampire {
     " |=_ |/^\\^=^^=^/^\\| _=| /\\/_\\./\\ \n" +
     "No other doors seem to be present in the room.");
     System.out.println("What will you do now?");
-    System.out.println("1) Attempt to open the front door \n" +
+    System.out.println("1) Open the front door \n" +
     "2) Go to the Casket \n" +
     "3) Go to the Bookshelf \n" +
     "4) Go to the Wardrobe \n" +
@@ -73,7 +73,7 @@ public class Vampire {
     switch (choice1) {
       case 1: choice1String = "You pull on the door handle, but it doesn't budge. You are trapped in here.";
       break;
-      case 2: choice1String = "You walk over to the casket. Its hard wood top seems to be slightly ajar." +
+      case 2: choice1String = "You walk over to the casket. Its hard wood top seems to be slightly ajar. \n" +
       "   __________________________________________________ \n" +
       "  |\\                                                /| \n" +
       "  | \\ _____________________________________________/ | \n" +
@@ -91,7 +91,7 @@ public class Vampire {
       "  |                         |                        | \n" +
       "  |__________________________________________________| \n";
       break;
-      case 3: choice1String = "You walk over to the bookshelf. It is filled with row after row of books, ranging from thin, childrens books to thick, old books." +
+      case 3: choice1String = "You walk over to the bookshelf. It is filled with row after row of books, ranging from thin, childrens books to thick, old books. \n" +
       " ____________________________________________________ \n" +
       "|____________________________________________________| \n" +
       "| __     __   ____   ___ ||  ____    ____     _  __  | \n" +
@@ -122,7 +122,7 @@ public class Vampire {
       "|___\\_|_|_____________________\\_\\_________|_|_||_|_|_| \n" +
       "|____________________________________________________| \n";
       break;
-      case 4: choice1String = "You walk over to the wardrobe. Its meticulously decorated doors are closed shut." +
+      case 4: choice1String = "You walk over to the wardrobe. Its meticulously decorated doors are closed shut. \n" +
       "                       ________________ \n" +
       "                     ____============____ \n" +
       "                 _____==================_____ \n" +
@@ -209,7 +209,7 @@ public class Vampire {
         "  |                         |                        | \n" +
         "  |__________________________________________________| \n";
         break;
-        case 2: choice11String = "You walk over to the bookshelf. It is filled with row after row of books, ranging from thin, childrens books to thick, old books." +
+        case 2: choice11String = "You walk over to the bookshelf. It is filled with row after row of books, ranging from thin, childrens books to thick, old books. \n" +
         " ____________________________________________________ \n" +
         "|____________________________________________________| \n" +
         "| __     __   ____   ___ ||  ____    ____     _  __  | \n" +
@@ -379,6 +379,14 @@ public class Vampire {
             }
           }
         }
+      }
+      if(choice1 == 3) {
+        System.out.println("What will you do now?");
+        System.out.println("1) Open the Wardrobe \n" +
+        "2) Exit \n");
+        int choice3 = scan.nextInt();
+        String choice3String = "";
+
       }
     }
   }
