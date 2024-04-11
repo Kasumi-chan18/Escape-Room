@@ -97,7 +97,6 @@ class Zombies extends Room{
     }
 
     private boolean pullSwitch(){
-        // Implement logic to determine if correct switch is pulled
         //Return true if correct, false otherwise
         return false;
     }
