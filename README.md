@@ -1,5 +1,6 @@
 # Escape-Room
-commands: 
+
+commands:
 open
 investigate
 go to
@@ -10,4 +11,4 @@ Vampire: MacKenzie
 
 Circus: Emily
 
-Zombie:
+Zombie: Deborah
