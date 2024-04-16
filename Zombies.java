@@ -60,7 +60,7 @@ class Zombies extends Room{
             String action = scanner.nextLine().toLowerCase();
             switch(action){
                 case "investigate":
-                    System.out.println("You see graves with tombstones, and a white with behind two switches.");
+                    System.out.println("You see graves with tombstones, and a white witch standing behind two switches.");
                     break;
                 case "open":
                     System.out.println("You can't open anything here.");
@@ -77,7 +77,7 @@ class Zombies extends Room{
                         hasEscaped = true;
                         player.increaseScore(points);
                     }else{
-                        System.out.println("The white witch starts chasing you!");
+                        System.out.println("You have pulled the wrong switch!" +  "The white witch starts chasing you!");
                         //Logic to handle player being chased
                         isChased = true;
                     }
@@ -88,7 +88,7 @@ class Zombies extends Room{
         }
         if (isChased) {
             // Implement logic for player to evade or handle being chased
-            System.out.println("The white witch is chasing you!");
+            System.out.println("The white witch is chasing you, Run!");
             
             // For simplicity, let's assume the player's only option is to exit the game
             System.out.println("The white witch caught you." + "You have died.");
@@ -97,7 +97,7 @@ class Zombies extends Room{
     }
 
     private boolean pullSwitch(){
-        //Return true if correct, false otherwise
+        // Return true if correct, false otherwise
         return false;
     }
 }
