@@ -77,7 +77,7 @@ class Zombies extends Room{
                         hasEscaped = true;
                         player.increaseScore(points);
                     }else{
-                        System.out.println("The white with starts chasing you!");
+                        System.out.println("The white witch starts chasing you!");
                         //Logic to handle player being chased
                         isChased = true;
                     }
