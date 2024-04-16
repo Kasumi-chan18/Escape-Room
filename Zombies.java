@@ -60,25 +60,29 @@ class Zombies extends Room{
             String action = scanner.nextLine().toLowerCase();
             switch(action){
                 case "investigate":
-                    System.out.println("You see graves with tombstones, and a white witch standing behind two switches.");
+                    System.out.println("You walk around the room and see graves and tombstones with names on them," + "the names are Peter, Edmund, Lucy, and Susan.");
+                    System.out.println("You then noticed a ghastly-looking white witch standing behind two switches.");
                     break;
                 case "open":
                     System.out.println("You can't open anything here.");
                     break;
                 case "exit":
-                    System.out.println("There's nothing to pick up here.");
+                    System.out.println("You can't exit without pulling a switch here.");
+                    break;
+                case "pick up":
+                    System.out.println("You can't pick up anything here.");
                     break;
                 case "pull switch":
-                    System.out.println("You pull a switch...");
+                    System.out.println("You cautiously pull one of the switches...");
                     // Logic to determine if a player pulled the correct switch
                     boolean correctSwitch = pullSwitch();
                     if(correctSwitch){
-                        System.out.println("You hear a distant click. You have escaped the Zombies room!");
+                        System.out.println("You hear a distant click." + "A door appears in the room and opens up..." + "You walk through the door carefully..." + "You have escaped the Zombies room!");
                         hasEscaped = true;
                         player.increaseScore(points);
                     }else{
-                        System.out.println("You have pulled the wrong switch!" +  "The white witch starts chasing you!");
-                        //Logic to handle player being chased
+                        System.out.println("Uh-oh..." "You have pulled the wrong switch." +  "The white witch starts chasing you ruthlessly!");
+                        // Logic to handle player being chased
                         isChased = true;
                     }
                     break;
