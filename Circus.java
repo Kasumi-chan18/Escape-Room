@@ -1,7 +1,44 @@
 import java.util.Scanner;
+abstract class Room{
+    protected String description;
+    protected int points;
 
-public class Circus {
-    public static void main(String[] args) {
+    public Room(String description, int points){
+        this.description = description;
+        this.points = points;
+    }
+
+    public abstract void interact(Player player);
+}
+
+// Player class to keep track of player's progress
+class Player{
+    private int level;
+    private int score;
+
+    public Player(){
+        this.level = 0;
+        this.score = 0;
+    }
+
+    public int getLevel(){
+        return level;
+    }
+
+    public int getScore(){
+        return score;
+    }
+
+    public void increaseScore(int points){
+        this.score += points;
+    }
+
+    public void levelUp(){
+        this.level++;
+    }
+}
+ class Circus extends Room{
+    public Circus(){
         Scanner scan = new Scanner(System.in);
         boolean hasKey = false; // Track whether the key has been obtained
         int points = 100; // Starting points
@@ -137,4 +174,4 @@ public class Circus {
             }
         }
     }
-}
+ }
