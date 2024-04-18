@@ -17,12 +17,8 @@ public class EscapeRoom {
     circusRoom.interact(player);
     zombiesRoom.interact(player);
 
-    // Check if player has reached the end
-    if(player.getLevel() == 3){
-      System.out.println("Congratulations! You have escaped the mansion!");
-      System.out.println("Final Score: " + player.getScore());
-    }else{
-      System.out.println("Game Over!" + "You didn't escape the mansion in time...");
-    }
+  
+    // if the player has not survived/ 
+    //ran out of lives then they have to start that particular level over once again  
   }
 }
