@@ -46,7 +46,7 @@ class Zombies extends Room{
     private boolean isChased;
 
     public Zombies(){
-        super("You've entered the Zombies room. You must be stealthy to avoid alerting the zombies.", 100);
+        super("You've entered the Zombies room. \n" + "You must be stealthy to avoid alerting the wandering zombies.", 100);
         this.hasEscaped = false;
         this.isChased = false;
     }
@@ -60,8 +60,9 @@ class Zombies extends Room{
             String action = scanner.nextLine().toLowerCase();
             switch(action){
                 case "investigate":
-                    System.out.println("You walk around the room and see graves and tombstones with names on them," + "the names are Peter, Edmund, Lucy, and Susan.");
-                    System.out.println("You then noticed a ghastly-looking white witch standing behind two switches.");
+                    System.out.println("You walk around the room and see graves and tombstones with names on them. \n" + "The names read: \n" "Peter \n" + "Edmund \n" + "Lucy" + "Susan");
+                    System.out.println("You look to your left and notice a ghastly and scary-looking white witch standing behind two switches, staring wickedly at you.");
+                    System.out.println("You feel a chill run down your spine, so you cower in fear.");
                     break;
                 case "open":
                     System.out.println("You can't open anything here.");
@@ -77,11 +78,11 @@ class Zombies extends Room{
                     // Logic to determine if a player pulled the correct switch
                     boolean correctSwitch = pullSwitch();
                     if(correctSwitch){
-                        System.out.println("You hear a distant click." + "A door appears in the room and opens up..." + "You walk through the door carefully..." + "You have escaped the Zombies room!");
+                        System.out.println("You hear a distant click." + "A door appears in the room and opens up... \n" + "You walk through the door carefully...\n" + "You have escaped the Zombies room!");
                         hasEscaped = true;
                         player.increaseScore(points);
                     }else{
-                        System.out.println("Uh-oh..." "You have pulled the wrong switch.");
+                        System.out.println("Uh-oh..." + "You have pulled the wrong switch.");
                         // Logic to handle player being chased
                         isChased = true;
                     }
