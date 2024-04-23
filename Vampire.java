@@ -41,23 +41,41 @@ class Player{
 }
 
 class Vampire extends Room {
-  public Vampire() {
-    Scanner scan = new Scanner(System.in);
-    int lives = 3;
-    int points = 0;
-    int objects = 0;
-    boolean hasBook = false;
-    boolean hasGRobe = false;
-    boolean hasSRobe = false;
-    boolean hasRRobe = false;
-    boolean hasHRobe = false;
-    boolean fireOpen = false;
-    boolean wardFin = false;
-    boolean caskFin = false;
-    boolean bookFin = false;
-    boolean escaped = false;
-    int[] inventory = new int[objects];
+  private int lives;
+  private int points;
+  private int objects;
+  private boolean hasBook;
+  private boolean hasGRobe;
+  private boolean hasSRobe;
+  private boolean hasRRobe;
+  private boolean hasHRobe;
+  private boolean fireOpen;
+  private boolean wardFin;
+  private boolean caskFin;
+  private boolean bookFin;
+  private boolean escaped;
+  private int[] inventory;
 
+  public Vampire() {
+    this.lives = 3;
+    this.points = 0;
+    this.objects = 0;
+    this.hasBook = false;
+    this.hasGRobe = false;
+    this.hasSRobe = false;
+    this.hasRRobe = false;
+    this.hasHRobe = false;
+    this.fireOpen = false;
+    this.wardFin = false;
+    this.caskFin = false;
+    this.bookFin = false;
+    this.escaped = false;
+    this.inventory = new int[objects];
+  }
+
+  @Override
+  public void interact(Player player) {
+    Scanner scan = new Scanner(System.in);
     System.out.println("As you walk into the mansion, a chill runs down your back...");
     System.out.println("The door slams shut behind you!");
     System.out.println("A closed casket is on your left, in the corner. \n" +
@@ -214,6 +232,7 @@ class Vampire extends Room {
             switch (choice31) {
               case 1: choice31String = "You pull the Narnia books from the bookshelf. Nothing seems peculiar with them, but you take them with you anyways \n";
               hasBook = true;
+              objects++;
               points += 100;
               break;
               case 2: choice31String = "You grab the Harry Potter books from the bookshelf, but they dont slide off. Instead, they move in a lever-like fashion, and a shifting noise can be heard behind the bookshelf. \n" +
@@ -297,21 +316,25 @@ class Vampire extends Room {
                 case 2: choice411String = "You grab the Gryffindor robe. The wardrobe's doors swing shut, unable to be opened. \n";
                 hasGRobe = true;
                 wardFin = true;
+                objects++;
                 points += 100;
                 break;
                 case 3: choice411String = "You grab the Slytherin robe. The wardrobe's doors swing shut, unable to be opened. \n";
                 hasSRobe = true;
                 wardFin = true;
+                objects++;
                 points += 100;
                 break;
                 case 4: choice411String = "You grab the Ravenclaw robe. The wardrobe's doors swing shut, unable to be opened. \n";
                 hasRRobe = true;
                 wardFin = true;
+                objects++;
                 points += 100;
                 break;
                 case 5: choice411String = "You grab the Hufflepuff robe. The wardrobe's doors swing shut, unable to be opened. \n";
                 hasHRobe = true;
                 wardFin = true;
+                objects++;
                 points += 100;
                 break;
               }

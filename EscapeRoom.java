@@ -18,8 +18,8 @@ public class EscapeRoom {
     circusRoom.interact(player);
     zombiesRoom.interact(player);
 
-  
-    // if the player has not survived/ 
-    //ran out of lives then they have to start that particular level over once again  
+
+    // if the player has not survived/
+    //ran out of lives then they have to start that particular level over once again
   }
 }

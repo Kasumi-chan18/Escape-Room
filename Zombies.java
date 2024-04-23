@@ -89,7 +89,7 @@ class Zombies extends Room{
         if (isChased) {
             // Implement logic for player to evade or handle being chased
             System.out.println("The white witch is chasing you!");
-            
+
             // For simplicity, let's assume the player's only option is to exit the game
             System.out.println("The white witch caught you." + "You have died.");
             System.exit(0);

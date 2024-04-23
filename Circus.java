@@ -173,5 +173,6 @@ class Player{
                 }
             }
         }
+    scan.close();
     }
  }
