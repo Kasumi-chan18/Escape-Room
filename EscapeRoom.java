@@ -4,7 +4,8 @@ public class EscapeRoom {
     System.out.println("Welcome to the Escape Room game!");
     System.out.println("Instructions:\n1. Explore different rooms using commands like 'Go to', 'Investigate', 'Open', 'Pick up', and 'Exit'.");
     System.out.println("2. Earn points by achieving goals in each room.");
-    System.out.println("3. Try to escape the mansion by reaching the final room.");
+    System.out.println("3. One wrong move and you may just loose a life...");
+    System.out.println("4. Try to escape the mansion by reaching the final room.");
 
     // Instantiate rooms
     Room vampireRoom = new Vampire();
