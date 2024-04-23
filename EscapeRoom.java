@@ -23,3 +23,43 @@ public class EscapeRoom {
     //ran out of lives then they have to start that particular level over once again
   }
 }
+
+
+abstract class Room{
+  protected String description;
+  protected int points;
+
+  public Room(String description, int points){
+      this.description = description;
+      this.points = points;
+  }
+
+  public abstract void interact(Player player);
+}
+
+// Player class to keep track of player's progress
+class Player{
+  private int level;
+  private int score;
+
+  public Player(){
+      this.level = 0;
+      this.score = 0;
+  }
+
+  public int getLevel(){
+      return level;
+  }
+
+  public int getScore(){
+      return score;
+  }
+
+  public void increaseScore(int points){
+      this.score += points;
+  }
+
+  public void levelUp(){
+      this.level++;
+  }
+}
