@@ -60,7 +60,7 @@ class Zombies extends Room{
             String action = scanner.nextLine().toLowerCase();
             switch(action){
                 case "investigate":
-                    System.out.println("You walk around the room and see graves and tombstones with names on them. \n" + "The names read: \n" "Peter \n" + "Edmund \n" + "Lucy" + "Susan");
+                    System.out.println("You walk around the room and see graves and tombstones with names on them. \n" + "The names read: \n" + "Peter \n" + "Edmund \n" + "Lucy" + "Susan");
                     System.out.println("You look to your left and notice a ghastly and scary-looking white witch standing behind two switches, staring wickedly at you.");
                     System.out.println("You feel a chill run down your spine, so you cower in fear.");
                     break;
