@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class EscapeRoom {
   public static void main(String[] args) {
     Player player = new Player();
@@ -17,12 +19,48 @@ public class EscapeRoom {
     circusRoom.interact(player);
     zombiesRoom.interact(player);
 
-    // Check if player has reached the end
-    if(player.getLevel() == 3){
-      System.out.println("Congratulations! You have escaped the mansion!");
-      System.out.println("Final Score: " + player.getScore());
-    }else{
-      System.out.println("Game Over!" + "You didn't escape the mansion in time...");
-    }
+
+    // if the player has not survived/
+    //ran out of lives then they have to start that particular level over once again
+  }
+}
+
+
+abstract class Room{
+  protected String description;
+  protected int points;
+
+  public Room(String description, int points){
+      this.description = description;
+      this.points = points;
+  }
+
+  public abstract void interact(Player player);
+}
+
+// Player class to keep track of player's progress
+class Player{
+  private int level;
+  private int score;
+
+  public Player(){
+      this.level = 0;
+      this.score = 0;
+  }
+
+  public int getLevel(){
+      return level;
+  }
+
+  public int getScore(){
+      return score;
+  }
+
+  public void increaseScore(int points){
+      this.score += points;
+  }
+
+  public void levelUp(){
+      this.level++;
   }
 }
