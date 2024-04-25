@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class Circus {
-    public static void main(String[] args) {
+ class Circus extends Room{
+    public Circus(){
         Scanner scan = new Scanner(System.in);
         boolean hasKey = false; // Track whether the key has been obtained
         int points = 100; // Starting points
@@ -136,5 +136,6 @@ public class Circus {
                 }
             }
         }
+    scan.close();
     }
-}
+ }
