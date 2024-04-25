@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class EscapeRoom {
   public static void main(String[] args) {
     Player player = new Player();
@@ -41,18 +43,29 @@ abstract class Room{
 class Player{
   private int level;
   private int score;
+  private int lives;
 
   public Player(){
       this.level = 0;
       this.score = 0;
+      this.lives = 3;
   }
 
   public int getLevel(){
-      return level;
+      return this.level;
   }
 
   public int getScore(){
-      return score;
+      return this.score;
+  }
+
+  public int getLives() {
+    return this.lives;
+  }
+
+  public int setLives() {
+    this.lives = lives;
+    return this.lives;
   }
 
   public void increaseScore(int points){
@@ -62,4 +75,19 @@ class Player{
   public void levelUp(){
       this.level++;
   }
+}
+
+
+class Inventory {
+    private static ArrayList<String> items = new ArrayList<>();
+
+    // Method to add an item to the inventory
+    public static void addItem(String item) {
+        items.add(item);
+    }
+
+    // Method to get the current inventory
+    public static ArrayList<String> getInventory() {
+        return items;
+    }
 }

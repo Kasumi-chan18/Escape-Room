@@ -2,10 +2,16 @@ import java.util.Scanner;
 
  class Circus extends Room{
     public Circus(){
+      super("Circus room description", 100);
+    }
+
+    @Override
+    public void interact(Player player) {
+
         Scanner scan = new Scanner(System.in);
         boolean hasKey = false; // Track whether the key has been obtained
         int points = 100; // Starting points
-        int lives = 3; // Starting lives
+        int lives = player.getLives(); // Starting lives
 
         // Welcome message
         System.out.println("Welcome to the Circus room! You have " + points + " points and " + lives + " lives.");
@@ -136,6 +142,5 @@ import java.util.Scanner;
                 }
             }
         }
-    scan.close();
     }
  }
