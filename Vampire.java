@@ -82,7 +82,7 @@ class Vampire extends Room {
         break;
       }
 
-        if(choice1 == "2" && caskFin == false) {
+        if(choice1.equals("2")&& caskFin == false) {
           System.out.println("What will you do now?");
           System.out.println("1) Open the Casket \n" +
           "2) Exit");
@@ -96,7 +96,7 @@ class Vampire extends Room {
             break;
           }
 
-          if (choice2 == "1") {
+          if (choice2.equals("1")) {
             System.out.println("What will you do now?");
             System.out.println("1) Investigate the inside \n" +
             "2) Exit");
@@ -126,7 +126,7 @@ class Vampire extends Room {
               break;
             }
 
-            if (choice21 == "1") {
+            if (choice21.equals("1")) {
               System.out.println("What will you do now?");
               System.out.println("1) Lie inside the casket \n" +
               "2) Exit");
@@ -148,7 +148,7 @@ class Vampire extends Room {
             }
           }
         }
-        if(choice1 == "3" && bookFin == false) {
+        if(choice1.equals("3") && bookFin == false) {
           System.out.println("What will you do now?");
           System.out.println("1) Investigate the books \n" +
           "2) Exit \n");
@@ -177,7 +177,7 @@ class Vampire extends Room {
             break;
           }
 
-          if(choice3 == "1") {
+          if(choice3.equals("1")) {
             System.out.println("What will you do now?");
             System.out.println("1) Grab the Narnia books \n" +
             "2) Grab the Harry Potter books \n" +
@@ -201,7 +201,7 @@ class Vampire extends Room {
               break;
             }
 
-            if(choice31 == "1" || hasBook == true) {
+            if(choice31.equals("1") || hasBook == true) {
               System.out.println("What will you do now?");
               System.out.println("1) Grab the Harry Potter books \n" +
               "2) Exit \n");
@@ -221,7 +221,7 @@ class Vampire extends Room {
             }
           }
         }
-        if(choice1 == "4" && wardFin == false) {
+        if(choice1.equals("4") && wardFin == false) {
           System.out.println("What will you do now?");
           System.out.println("1) Open the Wardrobe \n" +
           "2) Exit \n");
@@ -236,7 +236,7 @@ class Vampire extends Room {
             break;
           }
 
-          if(choice4 == "1") {
+          if(choice4.equals("1")) {
             System.out.println("What will you do now?");
             System.out.println("1) Investigate the robes \n" +
             "2) Exit \n");
@@ -251,7 +251,7 @@ class Vampire extends Room {
               break;
             }
 
-            if(choice41 == "1") {
+            if(choice41.equals("1")) {
               System.out.println("What will you do now?");
               System.out.println("1) Grab the Vampire's Suit \n" +
               "2) Grab the Gryffindor Robe \n" +
@@ -298,7 +298,7 @@ class Vampire extends Room {
             }
           }
         }
-        if(choice1 == "5") {
+        if(choice1.equals("5")) {
           if(fireOpen == false) {
             System.out.println("It is a large, unlit fireplace, logs stacked both inside and to the side of the pit as if it is ready to be lit at any moment. \n");
             System.out.println("What will you do now? \n" +
