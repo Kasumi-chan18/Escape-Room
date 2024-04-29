@@ -24,7 +24,7 @@ class Zombies extends Room{
                 case "investigate":
                     System.out.println("You walk around the room and see graves and tombstones with names on them. \n" + "The names read: \n" + "Peter \n" + "Edmund \n" + "Lucy \n" + "Susan");
                     System.out.println("You look to your left and notice a ghastly, scary-looking white witch standing behind two giant switches, staring wickedly at you.");
-                    System.out.println("You feel a chill run down your spine, so you cower in fear.");
+                    System.out.println("You feel a chill run down your spine, so you cower in fear and tread carefully.");
                     break;
                 case "open":
                     System.out.println("You can't open anything in this room.");
@@ -55,7 +55,7 @@ class Zombies extends Room{
         }
         if (isChased) {
             // Implement logic for player to evade or handle being chased
-            System.out.println("The white witch is chasing you!");
+            System.out.println("The white witch is chasing you! Run!");
             
             // For simplicity, let's assume the player's only option is to exit the game
             System.out.println("The white witch has caught you." + "You have died." + "Restart the game to escape the haunted mansion...");
