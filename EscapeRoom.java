@@ -64,3 +64,18 @@ class Player{
       this.level++;
   }
 }
+
+
+class Inventory {
+    private static ArrayList<String> items = new ArrayList<>();
+
+    // Method to add an item to the inventory
+    public static void addItem(String item) {
+        items.add(item);
+    }
+
+    // Method to get the current inventory
+    public static ArrayList<String> getInventory() {
+        return items;
+    }
+}
