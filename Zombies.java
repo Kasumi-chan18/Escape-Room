@@ -22,18 +22,18 @@ class Zombies extends Room{
             String action = scanner.nextLine().toLowerCase();
             switch(action){
                 case "investigate":
-                    System.out.println("You walk around the room and see graves and tombstones with names on them. \n" + "The names read: \n" + "Peter \n" + "Edmund \n" + "Lucy" + "Susan");
-                    System.out.println("You look to your left and notice a ghastly and scary-looking white witch standing behind two switches, staring wickedly at you.");
+                    System.out.println("You walk around the room and see graves and tombstones with names on them. \n" + "The names read: \n" + "Peter \n" + "Edmund \n" + "Lucy \n" + "Susan");
+                    System.out.println("You look to your left and notice a ghastly, scary-looking white witch standing behind two giant switches, staring wickedly at you.");
                     System.out.println("You feel a chill run down your spine, so you cower in fear.");
                     break;
                 case "open":
-                    System.out.println("You can't open anything here.");
+                    System.out.println("You can't open anything in this room.");
                     break;
                 case "exit":
-                    System.out.println("You can't exit without pulling a switch here.");
+                    System.out.println("You can't exit without pulling a switch in this room.");
                     break;
                 case "pick up":
-                    System.out.println("You can't pick up anything here.");
+                    System.out.println("You can't pick up anything in this room.");
                     break;
                 case "pull switch":
                     System.out.println("You cautiously pull one of the switches...");
@@ -58,7 +58,7 @@ class Zombies extends Room{
             System.out.println("The white witch is chasing you!");
             
             // For simplicity, let's assume the player's only option is to exit the game
-            System.out.println("The white witch has caught you." + "You have died.");
+            System.out.println("The white witch has caught you." + "You have died." + "Restart the game to escape the haunted mansion...");
             System.exit(0);
         }
     }
