@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-
-
 // Zombies room
 class Zombies extends Room{
     private boolean hasEscaped;
