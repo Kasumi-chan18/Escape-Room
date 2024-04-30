@@ -6,7 +6,7 @@ class Zombies extends Room{
     private boolean isChased;
 
     public Zombies(){
-        super("You've entered the Zombies room. \n" + "You must be stealthy to avoid alerting the wandering zombies.", 100);
+        super("The door opens from the Circus room, you walk into the next room carefully...", 100);
         this.hasEscaped = false;
         this.isChased = false;
     }
@@ -15,6 +15,9 @@ class Zombies extends Room{
     public void interact(Player player){
         Scanner scanner = new Scanner(System.in);
         System.out.println(description);
+        int points = 100;
+        int lives = player.getLives();
+        System.out.println("You've entered the Zombies room! You have " + points + "points and " + lives + " lives left. \n" + "You must be stealthy to avoid alerting the wandering zombies.");
         while(!hasEscaped && !isChased){
             System.out.println("What will you do?");
             String action = scanner.nextLine().toLowerCase();
@@ -22,7 +25,7 @@ class Zombies extends Room{
                 case "investigate":
                     System.out.println("You walk around the room and see graves and tombstones with names on them. \n" + "The names read: \n" + "Peter \n" + "Edmund \n" + "Lucy \n" + "Susan");
                     System.out.println("You look to your left and notice a ghastly, scary-looking white witch standing behind two giant switches, staring wickedly at you.");
-                    System.out.println("You feel a chill run down your spine, so you cower in fear and tread carefully.");
+                    System.out.println("You feel another chill run down your spine, so you cower in fear and tread carefully.");
                     break;
                 case "open":
                     System.out.println("You can't open anything in this room.");
@@ -63,6 +66,10 @@ class Zombies extends Room{
 
     private boolean pullSwitch(){
         // Return true if correct, false otherwise
-        return false;
+        if(correctSwitch){
+            return true;
+        }else{
+            return false;
+        }
     }
 }

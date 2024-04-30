@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-
-
 class Vampire extends Room {
   private int points;
   private int objects;
