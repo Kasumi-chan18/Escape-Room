@@ -136,7 +136,6 @@ class Circus extends Room{
                        break;
                }
            }
-           scan.close();
        }
    }
 }

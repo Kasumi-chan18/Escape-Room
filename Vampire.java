@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 
 class Vampire extends Room {
- private int VampPoints;
  private boolean hasBook;
  private boolean fireOpen;
  private boolean wardFin;
@@ -17,7 +16,6 @@ class Vampire extends Room {
 
  public Vampire() {
    super("The Mansion stands tall as you approach the front door...", 100, 3);
-   this.VampPoints = 0;
    this.hasBook = false;
    this.fireOpen = false;
    this.wardFin = false;
@@ -38,7 +36,7 @@ class Vampire extends Room {
    "A large bookshelf, covering the wall to your right from floor to ceiling. \n" +
    "A wardrobe stands tall in the back right corner, closed shut. \n" +
    "A massive stone fireplace envelopes the wall in front of you. \n" +
-   "No other doors seem to be present in the room.");
+   "No other doors seem to be present in the Vampire's lair.");
 
 
    while(lives >= 0 && escaped == false) {
@@ -354,14 +352,7 @@ class Vampire extends Room {
        "There are still challenges that lie ahead... \n");
        System.out.println("\nScore Earned in First Level: " + VampPoints);
        System.out.println("\nLives Remaining: " + lives);
-       player.increaseScore(VampPoints);
-       player.getScore();
-       //player.setLives();
        System.out.println("Items in Inventory: " + inventory.getInventory());
      }
-     scan.close();
-   }
-   public int getVampPoints() {
-    return VampPoints;
    }
  }
