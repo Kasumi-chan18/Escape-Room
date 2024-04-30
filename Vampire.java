@@ -1,10 +1,6 @@
 import java.util.Scanner;
 
-
-
-
-
-
+//Vampire Room
 class Vampire extends Room {
  private int VampPoints;
  private boolean hasBook;
