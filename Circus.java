@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-
+//Circus Room
 class Circus extends Room{
    public Circus(){
      super("Circus room description", 100, 3);

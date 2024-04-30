@@ -1,11 +1,12 @@
 import java.util.Scanner;
 
 // Zombies room
-class Zombies extends Room {
 
+class Zombies extends Room {
     private boolean hasEscaped;
     private boolean isChased;
     private boolean correctSwitch;
+
 
     public Zombies() {
         super("The door opens from the Circus room, you walk into the next room carefully...", 100, 3);
@@ -21,7 +22,7 @@ class Zombies extends Room {
         System.out.println(description);
         int ZombPoints = 100;
         int lives = player.getLives();
-        System.out.println("You've entered the Zombies room! You have " + points + "points and " + lives
+        System.out.println("You've entered the Zombies room! You have " + ZombPoints + "points and " + lives
                 + " lives left. \n" + "You must be stealthy to avoid alerting the wandering zombies.");
 
         while (!hasEscaped && !isChased) {
@@ -66,6 +67,7 @@ class Zombies extends Room {
                     System.out.println("Invalid command. Try again.");
             }
         }
+
 
         if (isChased) {
             // Implement logic for player to evade or handle being chased

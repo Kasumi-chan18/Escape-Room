@@ -6,6 +6,7 @@ investigate
 go to
 pick up
 exit
+pull switch
 
 Vampire: MacKenzie
 
