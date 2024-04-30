@@ -7,6 +7,7 @@ go to
 pick up
 exit
 pull switch
+inventory
 
 Vampire: MacKenzie
 
