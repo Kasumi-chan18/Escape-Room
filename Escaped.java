@@ -1,25 +1,23 @@
-public class Escaped{
-    Room zombiesRoom = new Zombies();
+public class Escaped {
+  public void escape() {
+      Room vampireRoom = new Vampire();
+      Room circusRoom = new Circus();
+      Room zombiesRoom = new Zombies();
 
-    zombiesRoom.getScore() = score;
 
-    System.out.println("You have survived the wrath of the white witch and you breathe in a glup of fresh air");
-    System.out.println("Congratulations! You successfully escaped the haunted mansion...");
-    System.out.println("You have ended with " + score + 100);
-    System.out.println("You have " + lives + " lives left");
 
+      int totalScore = vampireRoom.getVampPoints() + circusRoom.getCircPoints() + zombiesRoom.getZombPoints() + 300;
+      int totalLives = 3;
+
+
+      System.out.println("You have survived the wrath of the white witch and you breathe in a gulp of fresh air");
+      System.out.println("Congratulations! You successfully escaped the haunted mansion...");
+
+
+      System.out.println("Points Earned in Vampire Room: " + (vampireRoom.getVampPoints() + 100) +
+      "\nPoints Earned in Circus Room: " + (circusRoom.getCircPoints() + 100) +
+      "\nPoints Earned in Zombies Room: " + (zombiesRoom.getZombPoints() + 100));
+      System.out.println("You have ended with " + totalScore + " points");
+      System.out.println("You have " + totalLives + " lives left");
+  }
 }
-// possibility for the stuff above
-/*if(player.getLevel() == 3){
-      System.out.println("Congratulations! You have escaped the mansion!");
-      System.out.println("Final Score: " + player.getScore());
-    }else{
-      System.out.println("Game Over!" + "You didn't escape the mansion in time...");
-    }
- *
- */
-
-// add in an array-> how tho??????
-// fix all current errors
-// add in inheritence -> make sure that everything is correct
-// add in polymorphism -> make sure that everything is correct
